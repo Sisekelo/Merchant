@@ -19,7 +19,7 @@
 	<div id="top">
 
 		<div id="title" class="center">
-			<h1> Oui Deliver Merchant</h1>
+			<h2> Oui Deliver Merchant</h2>
 		</div>
 
 		<div id="logo" class="center">
