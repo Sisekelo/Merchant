@@ -1,0 +1,165 @@
+.orders{
+    background: blue;
+    font-family: Avenir
+}
+
+p {
+	font-size: 20pt;
+	font-family: Avenir,Raleway;
+}
+
+html{
+	font-family: Avenir;	
+}
+
+.center button, .center h1, .center img, .center p,.center h2{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.center { 
+    position: relative;
+}
+
+#bottom{
+	height: 10vh;
+	background-color: #0174c5;
+	font: white	
+}
+
+
+#bottom p{
+	color: white;	
+}
+
+#bottom button{
+	height: 100%;
+	width: 100%;
+	background: none;
+	border: 0;
+	    font-size: 24pt;
+    color: white;
+    cursor: pointer;
+}
+
+#top{
+	height: 90vh;
+	background-color: white
+}
+
+#top p{
+	color: black;
+	font-size: 100%;
+}
+
+#title{
+	height: 10%;
+}
+
+#logo{
+	height: 30%;
+}
+
+#truck{
+	height: 100%;
+}
+
+#signin{
+	height: 60%
+}
+
+#signin form, #signupform form{
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#signin input,#signupform input{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    text-align: left;
+    border-bottom: 1px solid #0174c5;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+#signin span{
+	float: right;
+	cursor: pointer;
+	font-family: raleway;
+}
+
+#signuplink{
+	text-decoration: none;
+}
+
+#signuptop, #signuptop *{
+
+	margin: 2%;
+    background: #0174c5;
+    padding: 2%;
+    color: white;
+    text-decoration: none;
+
+}
+
+#signupform{
+	height: 100%;
+}
+
+#menu ul.group li {
+    display: inline;
+    float: left;
+    position: relative;
+    z-index: 5;
+    margin-left: 0px !important;
+}
+
+#menu ul.group li.first a.current {
+    background-position: top;
+}
+
+#menu ul.group li a.current {
+    background-position: bottom left;
+    text-decoration: none;
+}
+
+#menu ul.group li.first a {
+    background: url(../img/truck.png) no-repeat top left;
+    background-size: 60%;
+}
+
+#menu ul.group li a {
+    background: url(../images/navigation_background_blue.gif) repeat-x top left;
+}
+
+#menu ul.group li a {
+    display: block;
+    float: left;
+    height: 100px;
+    width: 114px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    z-index: 6;
+}
+
+a, a:active, a:link, a:visited { text-decoration:none; color: #069; }
