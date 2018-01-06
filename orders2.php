@@ -1,6 +1,6 @@
 	<?php
 
-	session_start();
+	require_once('auth.php');
 
 	if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
       header("location: index.php");
@@ -61,7 +61,7 @@
 <!-- MENU START -->
 <div id="menu">
 	<ul class="group" id="menu_group_main">
-		<li class="item first" id="one"><a href="Orders2.php" class="main current"><span class="outer"><span class="inner dashboard">Confirmations</span></span></a></li>
+		<li class="item first" id="one"><a href="orders2.php" class="main current"><span class="outer"><span class="inner dashboard">Confirmations</span></span></a></li>
 		<li class="item middle" id="four"><a href="preparation.php" class="main"><span class="outer"><span class="inner media_library">Preparations</span></span></a></li> 
 		<li class="item middle" id="eight"><a href="pickUp.php" class="main"><span class="outer"><span class="inner users">Pick Ups</span></span></a></li>  
 		<li class="item last" id="eight"><a href="deliveries.php" class="main"><span class="outer"><span class="inner settings">Deliveries</span></span></a></li>        
