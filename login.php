@@ -1,6 +1,7 @@
 <?php
 	//Start session
 	session_start();
+	ob_start();
 	
 	//Connect to mysql server
 	require "db.php";

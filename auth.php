@@ -1,5 +1,4 @@
 <?php
-ob_start();
 	//Start session
 	
 	//Check whether the session variable SESS_MEMBER_ID is present or not
