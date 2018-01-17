@@ -1,5 +1,4 @@
 <?php
-	ob_start();
 	require_once('auth.php');
 	$Vendor =$_SESSION['Vendor'];
 ?>
