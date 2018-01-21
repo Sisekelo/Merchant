@@ -1,6 +1,6 @@
 	<?php
 
-	require_once('auth.php');
+	/*require_once('auth.php');*/
 	if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
       header("location: index.php");
     }
