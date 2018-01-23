@@ -2,7 +2,7 @@
 	
 	require_once('auth.php');
 
-	if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
+	/*if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
       header("location: index.php");
     }
     elseif (isset($_GET["vendor"])) {
@@ -11,7 +11,7 @@
     }
     else {
     	$Vendor =$_SESSION['Vendor'];
-    };
+    };*/
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
