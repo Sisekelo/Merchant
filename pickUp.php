@@ -1,7 +1,6 @@
 <?php
 	ob_start();
 	require_once('auth.php');
-
 	$Vendor =$_SESSION['Vendor'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

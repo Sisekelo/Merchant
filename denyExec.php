@@ -15,7 +15,6 @@ $message = "".$Vendor." denied your order because: ".$Reason."";
 //send SMS to user
 
 	include ( "Nexmo-PHP-lib-master/NexmoMessage.php" ); 
-	/*$conmessage = 'Your order has just been confirmed. It is coming soon ;) Home: http://ouideliver.xyz/index.php';*/
 	// Step 1: Declare new NexmoMessage.
 	$nexmo_sms = new NexmoMessage('d6726b9a', '005e2f3453ccb56c');
 	// Step 2: Use sendText( $to, $from, $message ) method to send a message. 
@@ -23,6 +22,6 @@ $message = "".$Vendor." denied your order because: ".$Reason."";
 
 	/*echo $nexmo_sms->displayOverview($info);*/
 
-	header("location: https://ouideliver.xyz/Trial/admin/index.php?vendor=$Vendor");
+	header("location: https://ouideliver.xyz/Merchant/index.php?vendor=$Vendor");
 
 ?>

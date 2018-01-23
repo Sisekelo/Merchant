@@ -1,13 +1,16 @@
 <?php
-session_start();
 ob_start();
 require 'db.php';
+
+require_once('auth.php');
+$Vendor =$_SESSION['Vendor'];
 
 $number= $_GET["number"];
 $numberPlus = '+'.$number;
 $numberPlus = str_replace(' ', '', $numberPlus);
 $id = $_GET["id"];
-$Vendor = $_GET["Vendor"];
+/*$Vendor = $_GET["Vendor"];*/
+$email = $_GET["email"];
 
 ?>
 
