@@ -1,5 +1,5 @@
 <?php
-
+	
 	require_once('auth.php');
 
 	if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
