@@ -1,7 +1,6 @@
-	<?php
-
+<?php
+	
 	require_once('auth.php');
-	ob_start();
 
 	if(!isset($_GET["vendor"]) && !isset($_SESSION['Vendor']) ){
       header("location: index.php");
@@ -14,7 +13,6 @@
     	$Vendor =$_SESSION['Vendor'];
     };
 
-	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
@@ -52,7 +50,7 @@
 <!-- HIDDEN COLOR CHANGER -->      
       <div style="position:relative;">
   	<!--LOGO-->
-	<div class="grid_8" id="logo">Oui Deliver BoomGate</div>
+	<div class="grid_8" id="logo">Oui Deliver Merchant</div>
     <div class="grid_8">
 <!-- USER TOOLS START -->
       <div id="user_tools"><span><a href="index.php">Logout</a></span></div>
@@ -62,10 +60,10 @@
 <!-- MENU START -->
 <div id="menu">
 	<ul class="group" id="menu_group_main">
-		<li class="item first" id="one"><a href="boomgate.php" class="main current"><span class="outer"><span class="inner dashboard">Confirmations</span></span></a></li>
-		<li class="item middle" id="four"><a href="preparationboom.php" class="main"><span class="outer"><span class="inner media_library">Preparations</span></span></a></li> 
-		<li class="item middle" id="eight"><a href="pickUpboom.php" class="main"><span class="outer"><span class="inner users">Pick Ups</span></span></a></li>  
-		<li class="item last" id="eight"><a href="deliveriesboom.php" class="main"><span class="outer"><span class="inner settings">Deliveries</span></span></a></li>        
+		<li class="item first" id="one"><a href="orders2.php" class="main current"><span class="outer"><span class="inner dashboard">Confirmations</span></span></a></li>
+		<li class="item middle" id="four"><a href="preparation.php" class="main"><span class="outer"><span class="inner media_library">Preparations</span></span></a></li> 
+		<li class="item middle" id="eight"><a href="pickUp.php" class="main"><span class="outer"><span class="inner users">Pick Ups</span></span></a></li>  
+		<li class="item last" id="eight"><a href="deliveries.php" class="main"><span class="outer"><span class="inner settings">Deliveries</span></span></a></li>        
     </ul>
 </div>
 <!-- MENU END -->
@@ -112,7 +110,7 @@
 				<?php
 					include('db.php');
 					/*$result = mysql_query("SELECT * FROM reservation ORDER BY firstname ASC");*/
-					$result = $mysqli ->query("SELECT * FROM  Orders2 WHERE Confirm = '0' AND Prepared = '0' AND Deny='0'AND  PickUp = '0' AND Deliver='0'  ORDER BY Date ASC");
+					$result = $mysqli ->query("SELECT * FROM  Orders2 WHERE Confirm = '0' AND Prepared = '0' AND Deny='0'AND  PickUp = '0' AND Deliver='0' AND Vendor='$Vendor'  ORDER BY Date ASC");
 					while($row = mysqli_fetch_array($result))
 						{
 							echo '<tr>';
@@ -123,7 +121,7 @@
 							echo '<td><div align="left">'.$row['Quantity'].'</div></td>';
 							echo '<td><div align="left">'.$row['Drink_Choice'].'</div></td>';
 
-							echo '<td><div align="center"><a  href="confirmOrderboom.php?id='.$row['Id'].'&number='.$row['Buyer_Number'].'&vendor='.$Vendor.'" title="Click To View Orders">Confirm Order</a></div></td>';
+							echo '<td><div align="center"><a  href="confirmOrder.php?id='.$row['Id'].'&number='.$row['Buyer_Number'].'&vendor='.$Vendor.'" title="Click To View Orders">Confirm Order</a></div></td>';
 							echo '<td><div align="center"><a rel="facebox" href="denyOrder.php?id='.$row['Id'].'&number='.$row['Buyer_Number'].'&Vendor='.$Vendor.'" title="Click To View Orders">Deny Order</a></div></td>';
 							echo '</tr>';
 						}
